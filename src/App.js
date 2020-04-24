@@ -1,5 +1,11 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import Navbar from "./Navbar/Navbar";
+import { recipeColo } from "./Styles/colors";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./components/About";
+import Home from "./components/Home";
+import Error from "./components/Error";
 
 const GlobalStyle = createGlobalStyle`
     body{
@@ -7,15 +13,29 @@ const GlobalStyle = createGlobalStyle`
       h1,h2,h3{
         font-family: 'Righteous', cursive;
       }
+      margin: 0;
 
     }
 `;
-
 function App() {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <h1>ashok</h1>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route path="*">
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
     </React.Fragment>
   );
 }
