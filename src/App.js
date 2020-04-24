@@ -1,12 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+    body{
+      font-family: 'Open Sans', sans-serif;
+      h1,h2,h3{
+        font-family: 'Righteous', cursive;
+      }
+
+    }
+`;
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
+      <GlobalStyle />
       <h1>ashok</h1>
-    </div>
+    </React.Fragment>
   );
 }
 
