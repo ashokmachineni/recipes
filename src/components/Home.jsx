@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RecipeList from "./Recipe";
 import Recipe from "./Recipe";
+import "./Home.scss";
 
 import styled from "styled-components";
 
