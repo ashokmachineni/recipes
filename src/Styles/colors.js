@@ -1,0 +1,1 @@
+export const recipeColo="#B90A4C";
