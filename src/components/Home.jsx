@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RecipeList from "./Recipe";
 import Recipe from "./Recipe";
-import "./Home.scss";
+import "./Hom.scss";
 
 import styled from "styled-components";
 
@@ -24,8 +24,8 @@ function Home() {
     setRecipes(data.hits);
   };
   return (
-    <div className="recipes-card">
-      <HomeStyled>
+    <div className="container">
+      <div className="row equal">
         {recipes.map(recipe => (
           <Recipe
             key={recipe.recipe.label}
@@ -34,7 +34,7 @@ function Home() {
             image={recipe.recipe.image}
           />
         ))}
-      </HomeStyled>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,13 @@
 .recipes-card {
     width: 35vw;
-    max-width: 470px;
     margin: 0 auto;
-    padding: 2rem 0;
     display: grid;
-    grid-template-columns: auto;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .recipes-card {
+        display: block;
+        width: 100%;
+    }
 }

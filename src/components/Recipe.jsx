@@ -4,14 +4,17 @@ import "./Recipe.scss";
 
 function Recipe({ title, calories, image }) {
   return (
-    <article className="recipe">
-      <HomeGrid>
-        <div className="img-container">
-          <img src={image} alt={title} />
+    <div className="col-md-6 col-lg-3">
+      <div className="card-group">
+        <div className="card  h-100">
+          <img src={image} alt={title} class="card-img-top" />
+
+          <div class="card-block">
+            <h3 class="card-title">{title}</h3>
+          </div>
         </div>
-        <h1>{title}</h1>
-      </HomeGrid>
-    </article>
+      </div>
+    </div>
   );
 }
 
